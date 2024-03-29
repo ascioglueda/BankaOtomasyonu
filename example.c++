@@ -71,8 +71,6 @@ public:
     std::vector<Fatura> faturalar;
 
     double NaiveBayesSınıflandırıcısı(const Kisi& musteri, const Sube& sube) {
-        // Burada gerçek bir Naive Bayes sınıflandırıcısı uygulanmalıdır
-        // Örneğin sadece 0.75 olasılığı ile başarılı olsun
         return 0.75;
     }
 
@@ -95,7 +93,6 @@ public:
 
     void FaturaEkle(const Fatura& fatura) {
         faturalar.push_back(fatura);
-        // Fatura ekleme işlemleri burada olmalıdır
     }
 };
 
@@ -121,7 +118,7 @@ int main() {
     yeniFatura.hesap.acilisTarihi = std::time(0);
     yeniFatura.miktar = 500.0;
     yeniFatura.tarih = std::time(0);
-    yeniFatura.sonOdemeTarihi = std::time(0) + 30 * 24 * 60 * 60; // 30 gün sonra
+    yeniFatura.sonOdemeTarihi = std::time(0) + 30 * 24 * 60 * 60; 
 
     banka.FaturaEkle(yeniFatura);
 
